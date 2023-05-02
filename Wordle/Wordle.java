@@ -33,6 +33,8 @@ public class Wordle  extends JFrame implements ActionListener, ItemListener, Key
   private JButton reset;
   private JComboBox<String> letterList;
 
+  // i want to jump off a cliff, why did i use so many variables owell.
+
   Wordle() throws FileNotFoundException {
     super("Wordle");
 
@@ -427,7 +429,7 @@ public class Wordle  extends JFrame implements ActionListener, ItemListener, Key
                   if (word.indexOf(answer.charAt(j)) == word.lastIndexOf(answer.charAt(j)) && answer.indexOf(answer.charAt(j)) != answer.lastIndexOf(answer.charAt(j)) ) {
                     int last = answer.lastIndexOf(answer.charAt(j));
 
-                    if (answer.charAt(last) == word.charAt(last)) {
+                    if (answer.charAt(last) == word.charAt(last)) { // proably make all this stuff a method
                       setup[row][last].setBackground(new Color(84, 204, 73));
                       setup[row][last].setOpaque(true);
                       setup[row][last].setText(answer.substring(j,j+1).toUpperCase());
